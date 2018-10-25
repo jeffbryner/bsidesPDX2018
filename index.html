@@ -212,7 +212,7 @@
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
                     <h1>WIP</h1>
-                    <p>There's an app!</p>
+                    <p>There <s>is</s> will be an app!</p>
                     <div class="center">
                         <img src='src/images/wip.png' style="height: 60vh;margin-top:1vh;">
                     </div>
@@ -222,8 +222,6 @@
                         2) Add tags to allow one to categorize the function, tech stack, etc
                     </aside>
                 </section>
-
-
                 <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
                     <h1>Pivot!</h1>
                     <p>Select your criteria</p>
@@ -245,9 +243,28 @@
                 <section data-transition="fade-in fade-out" data-background-image="src/images/healthy.jpg">
                     <h1>💉Healthy?</h1>
                     <p>Hard to gauge health</p>
-
                     <aside class="notes">
                         So in the open source space, it's hard to tell if a project is healthy enough to use && rely on.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>💉Healthy?</h1>
+                    <div class="center">
+                            <img src='src/images/healthy2.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        An example, healty project that includes references to production deployments,
+                        releases, active commits, plenty of stars/forks, branches, etc.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>💉Healthy?</h1>
+                    <p>Feature complete? Abandoned? Health?</p>
+                    <div class="center">
+                            <img src='src/images/healthy3.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        Might be healthy and feature complete?
                     </aside>
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
@@ -264,6 +281,26 @@
                         - Healthy balance of open/closed issues?
                         - ideas?
                     </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Health</h1>
+                    <div class="center">
+                        <img src='src/images/healthrating.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        an example of rating based on the number of releases
+                        would love some 'data sciency' help to make this more valid/accurate
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Health Pivot</h1>
+                    <div class="center">
+                        <img src='src/images/healthy4.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        an example of rating based on the number of releases
+                        would love some 'data sciency' help to make this more valid/accurate
+                    </aside>
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
                     <h1>Lists</h1>
@@ -271,7 +308,9 @@
                     <div class="center">
                         <img src='src/images/Sesame-Street-5.png' style="height: 40vh;">
                     </div>
+                    <p>(that maybe you didn't know..and now you do!)</p>
                     <aside class="notes">
+
                     </aside>
                 </section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
@@ -362,8 +401,8 @@
                     <div class="center">
                             <p>How <b>you</b> can help:</p>
                             <ol><ul>
-                                    <li>Help code inventory</li>
-                                    <li>Help inventory tools (tags), etc</li>
+                                    <li>Help code inventory/catalog</li>
+                                    <li>Help crowdsource inventory tools (tags), etc</li>
                                     <li>Help yer favorite OSS project!</li>
                                 </ul>
                             </ol>
@@ -416,11 +455,13 @@
 				],
 				history: true,
 				height: '100%',
-				margin: 0.1,
+				margin: 0.02,
                 width: '100%',
                 progress: true,
                 transitionSpeed: 'slow',
-                transition: 'slide'
+                transition: 'slide',
+                minScale: 1,
+                maxScale: 1
 			});
 		</script>
 
