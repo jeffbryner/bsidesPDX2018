@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/mozilla.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- load the visualization css -->
+		<link rel="stylesheet" href="node_modules/vis/dist/vis.min.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal" data-transition="slide-in fade-out">
+			<div class="slides white">
+                <section class="center white h3" data-background-image="src/images/bg-title-slide.png">
+                    <img style="display: block; height: 6vh; margin: 4vh 0 6vh;" src="src/images/moz-logo-bw-rgb.svg"></img>
+                    <div style="margin-bottom: 6vh;">Open Source Security Solutions:
+                    <div style="margin: 1vh 0 1vh"></div>  solve <i>your</i> problem!</div>
+                    <div class="h6" style="margin-bottom: 4vh;">bsides PDX 2018</div>
+                    <div class="h6">Jeff Bryner</div>
+                    <div class="h6">Director: Enterprise Information Security</div>
+                </section>
+
+                <section class="black" data-background-image="src/images/bg-blue-slash2.svg" data-background-position="left" data-background-size="auto 100%">
+                    <agenda style="margin-top: 1vh">
+                        <name>Agenda</name>
+                        <items>
+                            <ol>
+                                <li>Problems
+                                    <ul>
+                                        <li class="fragment">Money</li>
+                                        <li class="fragment">Commercial Wins!</li>
+                                    </ul>
+                                </li>
+                                <li class="fragment">Open Source?</li>
+                                    <ul>
+                                        <li class="fragment green">OSS Wins!</li>
+                                        <li class="fragment red">Problems</li>
+                                        <li class="fragment">We've got work to do</li>
+                                        <li class="fragment darkblue">How can you help?</li>
+                                    </ul>
+                            </ol>
+                        </items>
+                    </agenda>
+                    <aside class="notes">
+                        no whois!
+                        notes: You've only go so much money for blinky boxes and consultants. Seems like open source could help
+                        here. What's working? What's holding people back?
+                        How can you help?
+                    </aside>
+                </section>
+
+                <section class="center" data-background-image="src/images/quantum.jpg">
+                    <h1 >Nope</h1>
+                    <p>not about browsers</p>
+                    <aside class="notes">
+                        Browsers are great! This is not a talk about browsers.
+                    </aside>
+                </section>
+                <section data-background-image="src/images/blue.jpg">
+                    <h1>Budgets: Poll 🙋🏽</h1>
+                    <div class="center">
+                        <ul >
+                            <li class="fragment h3">0 dollars 🤔</li>
+                            <li class="fragment h3 ">enough dollars 😌</li>
+                            <li class="fragment h3">too many dollars 😜</li>
+                        </ul>
+                    </div>
+                    <aside class="notes">
+                        We all have a budget to operate within.
+                        How many feel they have no say over their budget; essentially 0 dollars?
+                        How many have 'enough'?
+                        How many don't know what to do with all yer money?
+                    </aside>
+                </section>
+                <section  data-background-image="src/images/blue.jpg">
+                    <h2>🤕 No brainers?</h2>
+                    <div class="center">
+                        <h3>Commercial space</h3>
+                        <ol><ul>
+                                <li>database security</li>
+                                <li>email security (DKIM, etc.. uggh)</li>
+                                <li>AV?</li>
+                            </ul>
+                        </ol>
+                    </div>
+                    <aside class="notes">
+                        There are some clear areas of infosec where there is little open source coverage:
+                        Database Security
+                        Email Security (DKIM, etc.)
+                    </aside>
+                </section>
+
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>📝Current Landscape?</h1>
+                    <p>When in doubt, ask!</p>
+                    <div class="center">
+                        <img src="src/images/survey.png" style="height: 50vh;">
+                    </div>
+                    <aside class="notes">
+                        Easiest way to find out what folks are stuggling with is to ask them.
+                        Culture of experiments: surveys are cheap!
+                        Looking for:
+                        - use or don't use?
+                        - what tools are in use?
+                        - barriers
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>☑︎ Survey says</h1>
+                    <p>Open source is in play</p>
+                    <div class="center">
+                        <img src="src/images/survey-use.png" style="height: 50vh;">
+                    </div>
+                    <aside class="notes">
+                        Folks do use open source.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>⌘ Used && Useful:</h1>
+                    <div class="center">
+                        <p>Tools that are in play include:</p>
+                        <ol><ul>
+                                <li>(IDS) Bro/Zeek/Snort/Suricata</li>
+                                <li>(Logs) ELK, Gray Log</li>
+                                <li>(Endpoint) OS Query, GRR</li>
+                                <li>(Scanners) nmap, nikto, zap</li>
+                            </ul>
+                        </ol>
+                    </div>
+                    <aside class="notes">
+                        Some 'name brand', tools in play in the enterprise.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>☠ Barriers </h1>
+                    <div class="center">
+                        <img src='src/images/challenges.png' style="height: 60vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/catalog.jpg" data-background-opacity=".9">
+                    <h1>Catalog</h1>
+                    <p>What's out there?</p>
+                    <aside class="notes">
+                        Survey respondents noted that a part of the problem is knowing what exists.
+                        Long standing projects like snort, bro, suricata, nmap, metasploit benefit from
+                        tribal knowlege as well as coverage in certifcations, etc.
+                        New projects have things like demo lab at Defcon, arsenal at black hat, but get almost no
+                        coverage from press, etc unless they are attached to a tech giant like facebook, google, etc.
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Lists</h1>
+                    <div class="center">
+                            <p>We make lists:</p>
+                            <ol><ul>
+                                    <li class="fragment">n0where.net / cyberpunk ( Penetration Testing and Security Auditing Tools)</li>
+                                    <li class="fragment"> https://github.com/meirwah/awesome-incident-response</li>
+                                    <li class="fragment">https://github.com/jivoi/awesome-ml-for-cybersecurity</li>
+                                    <li class="fragment">https://github.com/0x4D31/awesome-threat-detection</li>
+                                    <li class="fragment">https://github.com/Cugu/awesome-forensics</li>
+                                    <li class="fragment">https://github.com/sbilly/awesome-security</li>
+                                    <li class="fragment">https://github.com/sindresorhus/awesome</li>
+                                    <li class="fragment">https://github.com/jnv/lists</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    <aside class="notes">
+                    </aside>
+    			</section>
+
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Meanwhile</h1>
+                    <p>Commercial tools have buyer's guides</p>
+                    <div class="center">
+                        <img src='src/images/buyersguide.png' style="height: 50vh;">
+                    </div>
+                    <aside class="notes">
+                        Lots of product roundups with in-depth reviews, comparisons, etc.
+                    </aside>
+    			</section>
+
+
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Framework</h1>
+                    <p>How to shop?</p>
+                    <div class="center">
+                        <img src='src/images/cyberdefense.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        Maybe we should build on the 'cyber defense matrix'
+                        OWASP project to help add a framework to the tools we invest in.
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>WIP</h1>
+                    <p>There's an app!</p>
+                    <div class="center">
+                        <img src='src/images/wip.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        Work in progress app/site to catalog open source tools:
+                        1) Take the existing lists
+                        2) Add tags to allow one to categorize the function, tech stack, etc
+                    </aside>
+                </section>
+
+
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Pivot!</h1>
+                    <p>Select your criteria</p>
+                    <div class="center">
+                        <img src='src/images/pivotselect.png' style="height: 40vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Pivot!</h1>
+                    <p>Potential solutions</p>
+                    <div class="center">
+                        <img src='src/images/pivotresults.png' style="height: 40vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/healthy.jpg">
+                    <h1>💉Healthy?</h1>
+                    <p>Hard to gauge health</p>
+
+                    <aside class="notes">
+                        So in the open source space, it's hard to tell if a project is healthy enough to use && rely on.
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Data!</h1>
+                    <p>Use data to gauge health</p>
+                    <div class="center">
+                        <img src='src/images/githubapi.png' style="height: 60vh;margin-top:1vh;">
+                    </div>
+                    <aside class="notes">
+                        github has a rich api, most open source projects are on github so lets use this to help folks
+                        figure out if a project is healthy:
+                        - Has releases?
+                        - Active commits?
+                        - Healthy balance of open/closed issues?
+                        - ideas?
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Lists</h1>
+                    <p>5 things you can do with open source!</p>
+                    <div class="center">
+                        <img src='src/images/Sesame-Street-5.png' style="height: 40vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Map yer cloud</h1>
+                    <p>https://github.com/duo-labs/cloudmapper</p>
+                    <div class="center">
+                        <img src='src/images/Earth-Clouds.jpg' style="height: 60vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/cloudmapper.png" data-background-size="auto 100%">
+                    <aside class="notes">
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>JA3</h1>
+                    <p>SSL fingerprinting</p>
+                    <div class="center">
+                        <img src='src/images/clienthello.png' style="height: 45vh;">
+                    </div>
+                    <p>SSLVersion, Cipher, SSLExtension, EllipticCurve, EllipticCurvePointFormat</p>
+                    <aside class="notes">
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>JA3</h1>
+                    <div class="center">
+                        <img src='src/images/ja3examples.png' style="height: 60vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>JA3-whew!</h1>
+                    <div class="center">
+                        <img src='src/images/ja3-whew.png' >
+                    </div>
+                    <aside class="notes">
+                    </aside>
+    			</section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Pwnage?</h1>
+                    <p>Easily check data exposure:  https://github.com/brycx/checkpwn </p>
+                    <div class="center">
+                        <img src='src/images/checkpwn.gif' style="height: 60vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Binary Alert</h1>
+                    <p>Easy s3/yara https://github.com/airbnb/binaryalert</p>
+                    <div class="center">
+                        <img src='src/images/binaryalert.png' style="height: 50vh;">
+                    </div>
+                    <p> (relatively easy)</p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>gltail</h1>
+                    <p>https://github.com/Fudge/gltail</p>
+                    <div class="center">
+                        <video muted data-autoplay style="height: 60vh;">
+                            <source data-src="src/images/gltail.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>Help!</h1>
+                    <div class="center">
+                            <p>How <b>you</b> can help:</p>
+                            <ol><ul>
+                                    <li>Help code inventory</li>
+                                    <li>Help inventory tools (tags), etc</li>
+                                    <li>Help yer favorite OSS project!</li>
+                                </ul>
+                            </ol>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section class="center white h3" data-background-image="src/images/bg-title-slide.png">
+                    <img style="display: block; height: 6vh; margin: 4vh 0 6vh;" src="src/images/moz-logo-bw-rgb.svg"></img>
+                    <div style="margin-bottom: 6vh;">Thanks!
+                    <div class="h6">Jeff Bryner</div>
+                    <div class="h6">@0x7eff</div>
+                    <div class="h6">jbryner@mozilla.com</div>
+
+                </section>
+                <!-- template -->
+                <section data-transition="fade-in fade-out" data-background-image="src/images/blue.jpg">
+                    <h1>template</h1>
+                    <p>point</p>
+                    <div class="center">
+                        <img src='src/images/some.png' style="height: 40vh;">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+    			</section>
+
+            </div>
+		</div>
+
+
+	    <footer>
+            <p>
+                <img style="display: block; height: 3.5vh; margin: 1vh 1vh 1vh;" src="src/images/moz-logo-bw-rgb.svg"></img>
+            </p>
+        </footer>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script type="text/javascript">
+			// Initialize reveal.js
+			Reveal.initialize({
+				center: false,
+				controls: false,
+				dependencies: [
+//					{ src: 'plugin/markdown/marked.js' },
+//					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+				history: true,
+				height: '100%',
+				margin: 0.1,
+                width: '100%',
+                progress: true,
+                transitionSpeed: 'slow',
+                transition: 'slide'
+			});
+		</script>
+
+		<script src="node_modules/vis/dist/vis.min.js"></script>
+
+	</body>
+</html>

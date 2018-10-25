@@ -1,0 +1,15 @@
+*.iml
+*.iws
+*.eml
+out/
+.DS_Store
+node_modules/
+package-lock.json
+.sass-cache
+css/reveal.min.css
+js/
+test/
+lib/
+plugin/
+css/theme
+css/print
