@@ -6,10 +6,7 @@ out/
 node_modules/
 package-lock.json
 .sass-cache
-css/reveal.min.css
-js/
 test/
-lib/
 plugin/
 css/theme
 css/print
