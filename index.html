@@ -64,7 +64,7 @@
                         notes: You've only go so much money for blinky boxes and consultants. Seems like open source could help
                         here. What's working? What's holding people back?
                         Mozilla is working on a new initiative to help curate a set of open source security solutions to common problems.
-
+                        These are some of the items we will hit in this talk.
                     </aside>
                 </section>
 
@@ -73,6 +73,38 @@
                     <p>not about browsers</p>
                     <aside class="notes">
                         Browsers are great! This is not a talk about browsers.
+                        This is focused on defensive, blue team, infosec challenges.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/boss.jpg" data-background-size="auto 100%">
+                    <aside class="notes">
+                        This summer I got a new boss. He asked me what Mozilla could do
+                        to help solve the worlds security problems, using open source.
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
+                    <h1>Open source</h1>
+                    <div class="center">
+                        <img src='src/images/opensource.png' style="height: 50vh;">
+                    </div>
+                    <aside class="notes">
+                        Mozilla loves open source. But how do we best help?
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/bunsenbeaker.jpg" data-background-size="auto 100%">
+                    <aside class="notes">
+                        So my boss and I agreed to use the remaining bits of 2018 to experiment,
+                        and do some focused work in 2019 to help curate open source security solutions.
+                         Thanks for helping me make my boss happy !
+                    </aside>
+                </section>
+                <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
+                    <h1>Curate</h1>
+                    <div class="center">
+                        <img src='src/images/curate.png' style="height: 50vh;">
+                    </div>
+                    <aside class="notes">
+                            and for helping me figure out what 'curate' really means.
                     </aside>
                 </section>
                 <section data-background-image="src/images/bg-blue-gradient3.png">
@@ -153,7 +185,7 @@
                     </div>
                     <aside class="notes">
                         Some 'name brand', tools in play in the enterprise.
-                        If you have problems in these areas, this seems to be a fairly well-work path.
+                        If you have problems in these areas, this seems to be a fairly well-worn path.
                     </aside>
                 </section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
@@ -173,7 +205,8 @@
                     <aside class="notes">
                         Not suprising; lack of support (one respondent noted open source is sometimes more of a science experiment)
                         We won't dive into that issue much here, a follow on survey about what type of support
-                        would be most relevant. But lets look at some other challenges.
+                        would be most relevant as would focused work in each of these areas to better understand the issues.
+                        Lets look at some other challenges.
                     </aside>
                 </section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/catalog.jpg" data-background-opacity=".9">
@@ -204,6 +237,7 @@
                             </ol>
                         </div>
                     <aside class="notes">
+                        What we tend to do in open source is make lists.
                     </aside>
     			</section>
 
@@ -217,7 +251,11 @@
                         Lots of product roundups with in-depth reviews, comparisons, etc.
                     </aside>
     			</section>
-
+                <section data-transition="fade-in fade-out" data-background-image="src/images/cybersecuritymarketmap.jpg" data-background-size="auto 100%">
+                    <aside class="notes">
+                        and categorizations
+                    </aside>
+                </section>
 
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
                     <h1>Framework</h1>
@@ -231,7 +269,7 @@
                     </aside>
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
-                    <h1>WIP</h1>
+                    <h1>WIP Experiment</h1>
                     <p>There <s>is</s> will be an app!</p>
                     <div class="center">
                         <img src='src/images/wip.png' style="height: 60vh;margin-top:1vh;">
@@ -335,6 +373,10 @@
                     </div>
                     <p>(that maybe you didn't know..and now you do!)</p>
                     <aside class="notes">
+                        OK, so a look at challenges and potential solution areas to do more work in.
+                        Lets pivot a bit and look at some open source projects you might not be
+                        aware of that can potentially help you in your infose program.
+                        No particular order.. not a beauty contest ;-]
 
                     </aside>
                 </section>
@@ -349,6 +391,10 @@
                 </section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/cloudmapper.png" data-background-size="auto 100%">
                     <aside class="notes">
+                        Easy way to get a handle on your AWS environment:
+                        - did that cloud formation template work?
+                        - did the intern spin up bitcoin miners?
+                        - did you remember to turn down that stack of expensive ec2 instances?
                     </aside>
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
@@ -359,6 +405,7 @@
                     </div>
                     <p>SSLVersion, Cipher, SSLExtension, EllipticCurve, EllipticCurvePointFormat</p>
                     <aside class="notes">
+                        TLS fingerprinting of the client hello,
                     </aside>
     			</section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
@@ -367,6 +414,11 @@
                         <img src='src/images/ja3examples.png' style="height: 60vh;">
                     </div>
                     <aside class="notes">
+                        Examples of the fingerprints.
+                        useful for:
+                        - you have an app (mobile) and an api, whitelist what talks to it
+                        - old versions of your app/browser in play?
+                        - monitoring your own infra for rogue traffic
                     </aside>
                 </section>
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
@@ -457,7 +509,7 @@
                     <div class="h6">jbryner@mozilla.com</div>
 
                 </section>
-                <!-- template -->
+                <!-- template
                 <section data-transition="fade-in fade-out" data-background-image="src/images/bg-blue-gradient3.png">
                     <h1>template</h1>
                     <p>point</p>
@@ -466,7 +518,8 @@
                     </div>
                     <aside class="notes">
                     </aside>
-    			</section>
+                </section>
+                -->
 
             </div>
 		</div>
