@@ -7,6 +7,5 @@ node_modules/
 package-lock.json
 .sass-cache
 test/
-plugin/
 css/theme
 css/print
